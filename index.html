@@ -16,24 +16,24 @@
 
 </head>
 <body>
-    <section class="max-w-6xl mx-auto bg-slate-200 mt-3 p-5 rounded-sm sticky top-0 bg-base-200 z-10">
+    <section class="lg:max-w-6xl mx-auto bg-slate-200 mt-0 lg:mt-3 p-2 lg:p-5 rounded-sm sticky top-0 bg-base-200 z-10">
         <header>
             <div>
-                <h2 class="font-bold text-[1.5rem] mb-3">Job Application Tracker</h2>
+                <h2 class=" font-semibold lg:font-bold text-[1.1rem] lg:text-[1.5rem] mb-2 lg:mb-3 lg:text-left text-center">Job Application Tracker</h2>
             </div>
 
             <div class="grid grid-cols-3 gap-2 ">
-                <div class="bg-white p-4 rounded-lg">
-                    <h5 class="text-[#323B49] font-medium text-[14px]">Total</h5>
-                    <p id="totalCount" class="text-[#002C5C] text-[1.2rem] font-bold">8</p>
+                <div class="bg-white p-2 lg:p-4 rounded-lg">
+                    <h5 class="text-[#323B49] font-medium text-[14px] text-center lg:text-left">Total</h5>
+                    <p id="totalCount" class="text-[#002C5C] text-[1.2rem] font-bold text-center lg:text-left">8</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg">
-                    <h5 class="text-[#323B49] font-medium text-[14px]">Interview</h5>
-                    <p id="interviewCount" class="text-[#10B981] text-[1.2rem] font-bold">0</p>
+                <div class="bg-white p-2 lg:p-4 rounded-lg">
+                    <h5 class="text-[#323B49] font-medium text-[14px] text-center lg:text-left">Interview</h5>
+                    <p id="interviewCount" class="text-[#10B981] text-[1.2rem] font-bold text-center lg:text-left">0</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg">
-                    <h5 class="text-[#323B49] font-medium text-[14px]">Rejected</h5>
-                    <p id="rejectCount" class="text-[#EF4444] text-[1.2rem] font-bold">0</p>
+                <div class="bg-white p-2 lg:p-4 rounded-lg">
+                    <h5 class="text-[#323B49] font-medium text-[14px] text-center lg:text-left">Rejected</h5>
+                    <p id="rejectCount" class="text-[#EF4444] text-[1.2rem] font-bold text-center lg:text-left">0</p>
                 </div>
             </div>
         </header>
@@ -41,12 +41,12 @@
 
     <section class="max-w-6xl mx-auto bg-slate-100 mt-3 p-5 rounded-sm">
         <div class="flex justify-between">
-            <h4 class="text-[1.4rem] font-bold">Available Jobs</h4>
+            <h4 class=" text-[1.3rem] lg:text-[1.4rem] font-medium lg:font-bold">Available Jobs</h4>
             <p class="text-[1.1rem] font-normal">8 jobs</p>
         </div>
 
         <div>
-            <div class="mt-4 ">
+            <div class=" mt-2 lg:mt-4 ">
 
                 <div id="all-button-hero" class="btn ">
                     <button >All</button>
@@ -60,11 +60,11 @@
 
             </div>
 
-            <div  class=" card mt-10 bg-white p-5 rounded-lg" data-status="not">
+            <div  class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data-status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
-                        <p class="text-[#64748B]">React Native Developer</p>
+                        <p class="text-[#64748B] mt-1 lg:mt-0">React Native Developer</p>
                     </div>
                     <div>
                         <button class=" delete btn rounded-full font-bold text-yellow-950  "><i class="fa-solid fa-trash-can"></i></button>
@@ -72,14 +72,14 @@
                 </div>
 
                 <div>
-                    <p class="text-[#64748B] mt-5">
+                    <p class="text-[#64748B] mt-1 lg:mt-5">
                         Remote • Full-time • $130,000 - $175,000
                     </p>
                 </div>
 
                 <div class="mt-5">
-                    <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold -mt-2 lg:mt-0">Not Applied</button>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -87,7 +87,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -106,7 +106,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -114,7 +114,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -133,7 +133,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -141,7 +141,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -160,7 +160,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -168,7 +168,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -187,7 +187,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -195,7 +195,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -214,7 +214,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -222,7 +222,7 @@
                     <button class="rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -241,7 +241,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
@@ -249,7 +249,7 @@
                     <button class=" rejected btn border-red-500 text-[#EF4444] font-bold">Rejected</button>
                 </div>
             </div>
-            <div class=" card mt-10 bg-white p-5 rounded-lg" data status="not">
+            <div class=" card mt-5 lg:mt-10 bg-white p-3 lg:p-5 rounded-lg" data status="not">
                 <div class="flex justify-between ">
                     <div>
                         <h3 class="text-[#002C5C] text-[1.2rem] font-medium">Mobile First Corp</h3>
@@ -268,7 +268,7 @@
 
                 <div class="mt-5">
                     <button class=" notApplied  btn bg-gray-300 text-emerald-950 font-bold">Not Applied</button>
-                    <p class="text-[#323B49] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="text-[#323B49] mt-2 text-[13px] lg:text-[16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
 
                 <div class="mt-5 gap-40">
