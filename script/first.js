@@ -56,13 +56,17 @@ updateCounter();
 
 // interview button
 
+//  
+
+
+
 let interviewBtns = document.querySelectorAll(".interview");
 
 interviewBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
         let card = btn.closest(".card")
         card.dataset.status = "interview";
-        card.querySelector(".notApplied").innerText = "Interview";
+        card.querySelector(".notApplied").innerText = "Interviewing";
         updateCounter();
     })
 })
