@@ -1,10 +1,10 @@
-** Job Application Tracker :
+** Job Application Tracker :-
     
-    Job Application Tracker is a mini dashboard that helps you track the current status of your job     applications (e.g. interview or rejection). It provides dynamic counters and real-time filtering     to simplify the user experience.
+    Job Application Tracker is a mini dashboard that helps you track the current status of your job applications (e.g. interview or rejection). It provides dynamic counters and real-time filtering to simplify the user experience.
 
 
 
-** Features :
+** Features :-
 
     * Dynamic counter: Live view of total applications, how many are on the interview list, and how many have been rejected.
 
@@ -20,7 +20,7 @@
 
 
 
-** Technologies Used :
+** Technologies Used :-
 
     *HTML5: For creating the structure of the project.
 
