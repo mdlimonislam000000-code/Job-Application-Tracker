@@ -36,10 +36,7 @@ firstRejectButton.addEventListener("click", function(){
 });
 
 
-// document.getElementById("all-button-hero").addEventListener("click", function(){
-//     this.style.backgroundColor = "black";
-//     this.style.color = "white";
-// })
+
 
 function updateCounter(){
 
@@ -88,16 +85,6 @@ interviewBtns.forEach(function(btn){
     })
 
 })
-
-
-
-// interviewBtns.addEventListener("click", function(){
-//     let card = btn.closest(".card")
-//     firstAllButton.push(card);
-//     card++;
-// })
-
-
 
 
 
