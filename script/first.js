@@ -50,9 +50,16 @@ function updateCounter(){
 
 
 
-    document.getElementById("totalCount").innerText = allCards.length;
+    // document.getElementById("totalCount").innerText = allCards.length;
+    const elements = document.getElementsByClassName("totalCount");
+
+    for (let el of elements) {
+       el.innerText = allCards.length;
+    }
     document.getElementById("interviewCount").innerText =interviewCards.length;
     document.getElementById("rejectCount").innerText= rejectedCards.length;
+
+
 
     const totalExistingCards = document.querySelectorAll(".card").length;
     const noJobSection = document.getElementById("no-job-available");
@@ -70,7 +77,7 @@ updateCounter();
 
 
 let interviewBtns = document.querySelectorAll(".interview");
-
+console.log(interviewBtns.length);
 
 interviewBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
