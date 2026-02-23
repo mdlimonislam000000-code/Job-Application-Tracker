@@ -5,9 +5,9 @@ window.onload = function() {
     document.getElementById("all-button-hero").style.color = "white";
 };
 
-const firstAllButton = document.getElementById("all-button-hero");
-const firstInterviewButton = document.getElementById("interview-button-hero");
-const firstRejectButton = document.getElementById("rejected-button-hero");
+let firstAllButton = document.getElementById("all-button-hero");
+let firstInterviewButton = document.getElementById("interview-button-hero");
+let firstRejectButton = document.getElementById("rejected-button-hero");
 
 function resetStyle(){
     const buttons = [ firstAllButton, firstInterviewButton, firstRejectButton];
@@ -43,24 +43,34 @@ firstRejectButton.addEventListener("click", function(){
 
 function updateCounter(){
 
-    let allCards = document.querySelectorAll(".card");
+    let allCards = document.querySelectorAll('.card[data-status="not"]');
     
     let interviewCards = document.querySelectorAll('.card[data-status="interview"]');
     let rejectedCards = document.querySelectorAll('.card[data-status="rejected"]'); 
 
+
+
     document.getElementById("totalCount").innerText = allCards.length;
     document.getElementById("interviewCount").innerText =interviewCards.length;
     document.getElementById("rejectCount").innerText= rejectedCards.length;
+
+    const totalExistingCards = document.querySelectorAll(".card").length;
+    const noJobSection = document.getElementById("no-job-available");
+    if (allCards.length === 0) {
+        noJobSection.style.display = "block";
+    } else {
+        noJobSection.style.display = "none";
+    }
+
 }
+
 updateCounter();
 
 // interview button
 
-//  
-
-
 
 let interviewBtns = document.querySelectorAll(".interview");
+
 
 interviewBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
@@ -69,7 +79,19 @@ interviewBtns.forEach(function(btn){
         card.querySelector(".notApplied").innerText = "Interviewing";
         updateCounter();
     })
+
 })
+
+
+
+// interviewBtns.addEventListener("click", function(){
+//     let card = btn.closest(".card")
+//     firstAllButton.push(card);
+//     card++;
+// })
+
+
+
 
 
 // rejected button
@@ -83,6 +105,7 @@ rejectedBtns.forEach(function(btn){
         card.querySelector(".notApplied").innerText = "Rejected";
         updateCounter();
     })
+    
 })
 
 
@@ -101,26 +124,45 @@ deleteBtns.forEach(function(btn){
 })
 
 
-// filter buttons 
+// filter buttons
+
 
 let filterBtns = document.querySelectorAll("[data-filter]");
+const jobDisplay = document.getElementById("job-count-display");
  
 filterBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
         let filterValue = btn.dataset.filter ;
         let card = document.querySelectorAll(".card")
+        let visibleCardCount = 0 ;
+
         card.forEach(function(card){
             if(filterValue === "all"){
-                card.style.display = "block";
+                
+                if(card.dataset.status === "not"){
+                    card.style.display = "block";
+                    visibleCardCount++;
+                } else {
+                    card.style.display = "none";
+                }
+                
             }else{
                 if(card.dataset.status === filterValue){
                     card.style.display = "block";
-
+                    visibleCardCount++;
                 }
                 else{
                     card.style.display = "none";
                 }
             }
-        })
+        });
+
+        const noJobSection = document.getElementById("no-job-available");
+        if(visibleCardCount === 0){
+            noJobSection.style.display = "block";
+        }else {
+            noJobSection.style.display = "none";
+        }
     })
 })
+
