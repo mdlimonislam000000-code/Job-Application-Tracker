@@ -3,6 +3,7 @@
 window.onload = function() {
     document.getElementById("all-button-hero").style.backgroundColor = "black";
     document.getElementById("all-button-hero").style.color = "white";
+    updateCounter();
 };
 
 let firstAllButton = document.getElementById("all-button-hero");
@@ -47,12 +48,18 @@ function updateCounter(){
 
 
 
-    // document.getElementById("totalCount").innerText = allCards.length;
+
     const elements = document.getElementsByClassName("totalCount");
 
     for (let el of elements) {
        el.innerText = allCards.length;
     }
+    // for (let el2 of elements2) {
+    //    el2.innerText = interviewCards.length;
+    // }
+    
+
+
     document.getElementById("interviewCount").innerText =interviewCards.length;
     document.getElementById("rejectCount").innerText= rejectedCards.length;
 
@@ -68,21 +75,24 @@ function updateCounter(){
 
 }
 
-updateCounter();
+
 
 // interview button
 
 
 let interviewBtns = document.querySelectorAll(".interview");
-console.log(interviewBtns.length);
+// console.log(interviewBtns.length);
 
 interviewBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
         let card = btn.closest(".card")
         card.dataset.status = "interview";
         card.querySelector(".notApplied").innerText = "Interviewing";
+        card.querySelector(".notApplied").className = "notApplied btn bg-green-100 text-green-800 font-bold";
         updateCounter();
     })
+
+    
 
 })
 
@@ -97,6 +107,7 @@ rejectedBtns.forEach(function(btn){
         let card = btn.closest(".card");
         card.dataset.status = "rejected"
         card.querySelector(".notApplied").innerText = "Rejected";
+        card.querySelector(".notApplied").className = "notApplied btn bg-red-100 text-red-800 font-bold";
         updateCounter();
     })
     
@@ -122,7 +133,7 @@ deleteBtns.forEach(function(btn){
 
 
 let filterBtns = document.querySelectorAll("[data-filter]");
-const jobDisplay = document.getElementById("job-count-display");
+// const jobDisplay = document.getElementById("job-count-display");
  
 filterBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
@@ -150,6 +161,11 @@ filterBtns.forEach(function(btn){
                 }
             }
         });
+
+        const jobDisplaySpan = document.querySelector(".first .totalCount"); 
+        if (jobDisplaySpan) {
+            jobDisplaySpan.innerText = visibleCardCount;
+        }
 
         const noJobSection = document.getElementById("no-job-available");
         if(visibleCardCount === 0){
